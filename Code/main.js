@@ -93,20 +93,20 @@
 //     };
 //     return Employee;
 // }());
-// var emp1 = new Employee('Vishwas');
-// console.log(emp1.employeeName);
-// emp1.greet();
-// var Manager = /** @class */ (function (_super) {
-//     __extends(Manager, _super);
-//     function Manager(managerName) {
-//         return _super.call(this, managerName) || this;
-//     }
-//     Manager.prototype.delegateWork = function () {
-//         console.log('Manager delgating tasks' + this.employeeName);
-//     };
-//     return Manager;
-// }(Employee));
-// var m1 = new Manager('Bruce');
-// m1.delegateWork();
-// m1.greet();
-// console.log(m1.employeeName);
+var emp1 = new Employee('Vishwas');
+console.log(emp1.employeeName);
+emp1.greet();
+var Manager = /** @class */ (function (_super) {
+    __extends(Manager, _super);
+    function Manager(managerName) {
+        return _super.call(this, managerName) || this;
+    }
+    Manager.prototype.delegateWork = function () {
+        console.log('Manager delgating tasks' + this.employeeName);
+    };
+    return Manager;
+}(Employee));
+var m1 = new Manager('Bruce');
+m1.delegateWork();
+m1.greet();
+console.log(m1.employeeName);
